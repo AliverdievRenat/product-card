@@ -2,6 +2,9 @@
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
+}
+
+body {
   font-family: 'Montserratt', Arial, Helvetica;
   font-size: 13px;
   line-height: 18px;
@@ -16,7 +19,6 @@
 
 .header-card__text {
   width: 846px;
-  height: 78px;
   font-size: 70px;
   line-height: 78px;
   text-align: center;
@@ -80,15 +82,10 @@
 .card__price {
   display: flex;
   justify-content: space-between;
+  font-size: 20px;
+  line-height: 24px;
 }
 
 .card__price-text {
   font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-}
-
-.card__price-value {
-  font-size: 20px;
-  line-height: 24px;
 }
