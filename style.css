@@ -17,6 +17,18 @@ body {
   margin: 0 auto;
 }
 
+.background-image {
+  background-image: url("images/background-dandelion.png");
+  background-size: 790px 697px;
+  background-repeat: no-repeat;
+  background-position: 85px 0px;
+  width: 790px;
+  height: 697px;
+  top: 0;
+  position: absolute;
+  z-index: -1;
+}
+
 .header-card__text {
   width: 846px;
   font-size: 70px;
