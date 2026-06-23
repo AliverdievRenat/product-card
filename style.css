@@ -119,23 +119,24 @@ body {
 }
 
 .buy-button {
+  display: flex;
+  align-items: center;
+  border: 1px solid #A5A3B9;
   background: #FFFFFF;
-  padding: 6px 12px;
-  gap: 8px;
   border-radius: 6px;
-  text-align: center;
-  width: 100px;
-  height: 32px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #515076;
   align-self: center;
-  border: 2px solid #464F6029;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.buy-button::before {
-  content: "+";
-  font-size: 16px;
-  margin-right: 6px;
+.buy-button__plus {
+  color: #868FA0;
+  font-weight: 700;
+  margin-right: 8px;
 }
 
 .buy-button:hover {
@@ -143,6 +144,5 @@ body {
   background-color: #F7F9FC;
   box-shadow: 0px 0px 0px 4px #4FDB8A33,
               0px 0px 0px 1px #464F6052,
-              0px 1px 1px 0px #0000001A; 
-
+              0px 1px 1px 0px #0000001A;
 }
