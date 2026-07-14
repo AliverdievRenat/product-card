@@ -12,7 +12,7 @@ let clickCount = 0;
 changeColorCardButton.addEventListener('click', () => {
   clickCount += 1;
   
-  if (clickCount % 3 == 0) {
+  if (clickCount % 3 === 0) {
     productCard.style.backgroundColor = "";
   }
   else if (clickCount % 3 === 1) {
