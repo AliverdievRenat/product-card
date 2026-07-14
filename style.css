@@ -112,3 +112,18 @@ body {
 .card__price-text {
   font-weight: 700;
 }
+
+.header-button {
+  border: none;
+  border-radius: 5px;
+  margin: 15px;
+  padding: 5px;
+}
+
+.container__header-button {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  position: relative;
+  
+}
