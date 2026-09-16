@@ -2,7 +2,7 @@ import { productList } from "./products.js";
 
 //4
 const productDescriptions = productList.reduce((acc, product) => {
-  acc[product.name] = product.description;
+  acc.push({ [product.name]: product.description });
   return acc;
 }, []);
 
