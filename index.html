@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/modal-register.css">
+  <link rel="stylesheet" href="css/footer.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -17,6 +19,7 @@
       <button id="open-google" class="header-button">Открыть google</button>
       <button id="output-console-log" class="header-button">Вывод в консоль лог</button>
       <button id="color-generation" class="header-button">Клик-Клик</button>
+      <button id="open-register-modal" class="header-button">Регистрация</button>
     </div>
     <h1 class="header-card-text">Выбери свой продукт</h1>
     <div class="background-image"></div>
@@ -38,11 +41,155 @@
 
     <ul class="products"></ul>
   </div>
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__brand">
+        <h2 class="footer__logo">Product Cards</h2>
+        <p class="footer__description">У Нас Самые Лучшие Продукты Для Кожи!</p>
+        
+        <div class="footer__socials">
+          <a href="https://t.me/" class="footer__social-link" aria-label="Telegram" target="_blank">
+            <img src="images/telegram-icon.png" alt="Telegram" class="footer__social-icon">
+          </a>
+          <a href="https://vk.com/" class="footer__social-link" aria-label="VK" target="_blank">
+            <img src="images/vk-icon.png" alt="VK" class="footer__social-icon">
+          </a>
+        </div>
+      </div>
+      
+      <section class="footer__subscribe">
+        <h3 class="footer__subscribe-title">Подпишись на наши акции:</h3>
+        <form class="subscribe-form" id="subscribe-form" novalidate>
+          <label for="email" class="visually-hidden">Email</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            class="subscribe-form__input"
+            placeholder="Введи Email..."
+            required
+          >
+          <button type="submit" class="subscribe-form__button">
+            Подписаться
+          </button>
+        </form>
+      </section>
+      
+      <nav class="footer__nav">
+        <h3 class="footer__nav-title">Быстрые ссылки</h3>
+        <ul class="footer__nav-list">
+          <li><a href="#" class="footer__nav-link">Главная</a></li>
+          <li><a href="#" class="footer__nav-link">Магазин</a></li>
+          <li><a href="#" class="footer__nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+    
+    <div class="footer__bottom">
+      <p class="footer__copy">www.product-cards.com©all right reserve</p>
+    </div>
+  </footer>
   
-  <script src="main.js"></script>
-  <script src="homework-7.js"></script>
-  <script src="homework-8.js"></script>
-  <script src="homework-9.js" type="module"></script>
-  <script src="homework-10.js" type="module"></script>
+  <div class="modal" id="register-modal">
+    <div class="modal__overlay" id="modal-overlay"></div>
+    
+    <div class="modal__content">
+      <button class="modal__close" id="close-register-modal" aria-label="Закрыть">
+        &times;
+      </button>
+      
+      <h2 class="modal__title">Регистрация</h2>
+      
+      <form class="register-form" id="register-form" novalidate>
+        
+        <div class="register-form__field">
+          <label for="first-name" class="register-form__label">Имя:</label>
+          <input 
+            type="text" 
+            id="first-name" 
+            name="firstName" 
+            class="register-form__input"
+            placeholder="Введите имя"
+            minlength="2"
+            required
+          >
+        </div>
+        
+        <div class="register-form__field">
+          <label for="last-name" class="register-form__label">Фамилия:</label>
+          <input 
+            type="text" 
+            id="last-name" 
+            name="lastName" 
+            class="register-form__input"
+            placeholder="Введите фамилию"
+            minlength="2"
+            required
+          >
+        </div>
+        
+        <div class="register-form__field">
+          <label for="birth-date" class="register-form__label">Дата рождения:</label>
+          <input 
+            type="date" 
+            id="birth-date" 
+            name="birthDate" 
+            class="register-form__input"
+            required
+          >
+        </div>
+        
+        <div class="register-form__field">
+          <label for="login" class="register-form__label">Логин:</label>
+          <input 
+            type="text" 
+            id="login" 
+            name="login" 
+            class="register-form__input"
+            placeholder="Введите логин"
+            minlength="4"
+            required
+          >
+        </div>
+        
+        <div class="register-form__field">
+          <label for="password" class="register-form__label">Пароль:</label>
+          <input 
+            type="password" 
+            id="password" 
+            name="password" 
+            class="register-form__input"
+            placeholder="Введите пароль"
+            minlength="6"
+            required
+          >
+        </div>
+        
+        <div class="register-form__field">
+          <label for="confirm-password" class="register-form__label">Повторите пароль:</label>
+          <input 
+            type="password" 
+            id="confirm-password" 
+            name="confirmPassword" 
+            class="register-form__input"
+            placeholder="Повторите пароль"
+            minlength="6"
+            required
+          >
+        </div>
+        
+        <button type="submit" class="register-form__button">
+          Зарегистрироваться
+        </button>
+      </form>
+    </div>
+  </div>
+  
+  <script src="js/main.js"></script>
+  <script src="js/homework-7.js"></script>
+  <script src="js/homework-8.js"></script>
+  <script src="js/homework-9.js" type="module"></script>
+  <script src="js/homework-10.js" type="module"></script>
+  <script src="js/homework-11.js" type="module"></script>
 </body>
 </html>
